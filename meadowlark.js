@@ -25,11 +25,12 @@ app.use(handlers.notFound);
 // custom 500 page
 app.use(handlers.serverError);
 
+// this will be true if this main js file is being called directly by Node
 if(require.main === module) {
   app.listen(port, () => {
     console.log( `Express started on http://localhost:${port}` +
       '; press Ctrl-C to terminate.' );
   });
-} else {
+} else {    // otherwise we will export it for other modules to use (Integration test)
   module.exports = app;
 }
