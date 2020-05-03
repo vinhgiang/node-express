@@ -5,6 +5,8 @@
   "main": "meadowlark.js",
   "scripts": {
     "test": "jest",
+    "watch-test": "npm test -- --watch",
+    "test-coverage": "npm test -- --coverage",
     "lint": "eslint meadowlark.js lib"
   },
   "author": "",
